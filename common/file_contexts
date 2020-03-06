@@ -7,4 +7,3 @@
 /vendor/bin/awk                                     u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/cp                                      u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/toolbox_vendor                          u:object_r:vendor_toolbox_exec:s0
-/vendor/lib/modules/.*\.ko                          u:object_r:vendor_kernel_modules:s0
