@@ -7,7 +7,7 @@ userdebug_or_eng(`
   net_domain(wifi_sniffer)
 
 # configurate con mode
-  allow wifi_sniffer self:capability net_admin;
+  allow wifi_sniffer self:capability { net_admin net_raw };
   allow wifi_sniffer sysfs_wifi_conmode:file rw_file_perms;
 
 # interface up
