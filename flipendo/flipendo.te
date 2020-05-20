@@ -8,5 +8,8 @@ binder_call(flipendo, stats_service_server)
 
 allow flipendo app_api_service:service_manager find;
 
+# Allows Flipendo to change app saturation
+allow flipendo color_display_service:service_manager find;
+
 # Access to PowerHal service
 hal_client_domain(flipendo, hal_power);
