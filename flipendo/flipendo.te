@@ -6,6 +6,8 @@ app_domain(flipendo)
 allow flipendo fwk_stats_hwservice:hwservice_manager find;
 binder_call(flipendo, stats_service_server)
 
+binder_call(flipendo, gpuservice)
+
 allow flipendo app_api_service:service_manager find;
 
 # Allows Flipendo to change app saturation
