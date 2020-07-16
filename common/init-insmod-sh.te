@@ -8,6 +8,10 @@ allow init-insmod-sh self:capability sys_module;
 allow init-insmod-sh vendor_kernel_modules:system module_load;
 allow init-insmod-sh kernel:key search;
 
+# modprobe needs sys_nice and setsched for driver threads
+allow init-insmod-sh self:capability sys_nice;
+allow init-insmod-sh kernel:process setsched;
+
 # modprobe need proc_modules
 allow init-insmod-sh proc_modules:file r_file_perms;
 
