@@ -5,7 +5,7 @@ init_daemon_domain(hal_googlebattery)
 
 r_dir_file(hal_googlebattery, sysfs_batteryinfo)
 
-allow hal_googlebattery sysfs_charge:file rw_file_perms;
+allow hal_googlebattery sysfs_batteryinfo:file rw_file_perms;
 allow hal_googlebattery self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
 hwbinder_use(hal_googlebattery)
