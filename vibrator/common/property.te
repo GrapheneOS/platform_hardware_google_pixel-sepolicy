@@ -1,1 +1,1 @@
-type vendor_vibrator_prop, property_type;
+vendor_internal_prop(vendor_vibrator_prop)
