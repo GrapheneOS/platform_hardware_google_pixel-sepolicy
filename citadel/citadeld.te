@@ -9,6 +9,7 @@ allow citadeld citadel_device:chr_file rw_file_perms;
 init_daemon_domain(citadeld)
 
 binder_call(citadeld, hal_power_stats_default)
+allow citadeld hal_power_stats_vendor_service:service_manager find;
 
 # Let citadeld find and use statsd.
 hwbinder_use(citadeld)
