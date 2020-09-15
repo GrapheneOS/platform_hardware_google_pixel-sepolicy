@@ -7,3 +7,5 @@
 /vendor/bin/awk                                     u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/cp                                      u:object_r:vendor_toolbox_exec:s0
 /vendor/bin/toolbox_vendor                          u:object_r:vendor_toolbox_exec:s0
+
+/(vendor|system/vendor)/bin/hw/android\.hardware\.powerstats-service\.pixel u:object_r:hal_power_stats_default_exec:s0

@@ -1,0 +1,5 @@
+add_service(hal_power_stats_default, hal_power_stats_vendor_service)
+
+vndbinder_use(hal_power_stats)
+add_service(hal_power_stats_server, hal_power_stats_service)
+
