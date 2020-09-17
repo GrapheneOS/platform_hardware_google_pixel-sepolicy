@@ -1,0 +1,1 @@
+genfscon debugfs /page_owner                          u:object_r:debugfs_page_owner:s0
