@@ -15,3 +15,5 @@ allow flipendo color_display_service:service_manager find;
 
 # Access to PowerHal service
 hal_client_domain(flipendo, hal_power);
+
+dontaudit flipendo vendor_hwservice_type:hwservice_manager find;
