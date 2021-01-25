@@ -11,3 +11,6 @@ allow turbo_adapter app_api_service:service_manager find;
 
 # To find and call hal_power_default so turbo can obtain the service extension (IPowerExt)
 hal_client_domain(turbo_adapter, hal_power)
+
+# PAS: for PowerStatsHalDataProvider
+hal_client_domain(turbo_adapter, hal_power_stats)
