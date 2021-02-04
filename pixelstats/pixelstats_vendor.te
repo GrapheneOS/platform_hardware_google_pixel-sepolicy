@@ -9,3 +9,7 @@ binder_call(pixelstats_vendor, stats_service_server)
 
 allow pixelstats_vendor sysfs_zram:dir search;
 allow pixelstats_vendor sysfs_zram:file r_file_perms;
+
+allow pixelstats_vendor proc_vmstat:file r_file_perms;
+allow pixelstats_vendor sysfs_ion:dir search;
+allow pixelstats_vendor sysfs_ion:file r_file_perms;
