@@ -14,3 +14,6 @@ hal_client_domain(turbo_adapter, hal_power)
 
 # PAS: for PowerStatsHalDataProvider
 hal_client_domain(turbo_adapter, hal_power_stats)
+
+# PAS: for GoogleCpuTimeProvider
+r_dir_file(turbo_adapter, proc_uid_cputime_showstat);
