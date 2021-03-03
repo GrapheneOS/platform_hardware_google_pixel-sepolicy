@@ -2,7 +2,7 @@
 # this means that TurboAdapter doesn't get the platform_app permissions any more, so we need to
 # list everything that it needs here.
 
-type turbo_adapter, domain, coredomain;
+type turbo_adapter, domain, coredomain, system_suspend_internal_server;
 
 app_domain(turbo_adapter)
 
@@ -17,3 +17,6 @@ hal_client_domain(turbo_adapter, hal_power_stats)
 
 # PAS: for GoogleCpuTimeProvider
 r_dir_file(turbo_adapter, proc_uid_cputime_showstat);
+
+# PAS: for SuspendControlServiceDataProvider
+binder_call(turbo_adapter, system_suspend_internal_server)
