@@ -29,6 +29,8 @@ userdebug_or_eng(`
   get_prop(ramdump, hwservicemanager_prop)
   allow ramdump fwk_stats_hwservice:hwservice_manager find;
   binder_call(ramdump, stats_service_server)
+  allow ramdump fwk_stats_service:service_manager find;
+  binder_use(ramdump)
 
   # To implement fusefs (ramdumpfs) under /mnt/vendor/ramdump.
   allow ramdump fuse:filesystem relabelfrom;
