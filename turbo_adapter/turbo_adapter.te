@@ -20,3 +20,4 @@ r_dir_file(turbo_adapter, proc_uid_cputime_showstat);
 
 # PAS: for SuspendControlServiceDataProvider
 binder_call(turbo_adapter, system_suspend_internal_server)
+get_prop(turbo_adapter, suspend_prop)
