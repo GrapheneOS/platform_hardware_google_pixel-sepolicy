@@ -1,2 +1,1 @@
 android.hardware.citadel.ICitadeld  u:object_r:citadeld_service:s0
-power.stats-vendor                  u:object_r:hal_power_stats_vendor_service:s0
