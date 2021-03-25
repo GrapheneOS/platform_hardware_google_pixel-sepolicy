@@ -14,6 +14,8 @@ binder_call(pixelstats_vendor, stats_service_server)
 
 allow pixelstats_vendor sysfs_zram:dir search;
 allow pixelstats_vendor sysfs_zram:file r_file_perms;
+allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
+allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
 
 userdebug_or_eng(`
   allow pixelstats_vendor proc_vmstat:file r_file_perms;
@@ -21,4 +23,8 @@ userdebug_or_eng(`
   allow pixelstats_vendor sysfs_ion:file r_file_perms;
   allow pixelstats_vendor sysfs_dma_heap:dir search;
   allow pixelstats_vendor sysfs_dma_heap:file r_file_perms;
+  allow pixelstats_vendor debugfs_mgm:dir r_dir_perms;
+  allow pixelstats_vendor debugfs_mgm:file r_file_perms;
+  allow pixelstats_vendor kernel:dir search;
+  allow pixelstats_vendor kernel:file r_file_perms;
 ')
