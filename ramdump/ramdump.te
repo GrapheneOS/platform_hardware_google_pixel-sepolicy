@@ -25,15 +25,6 @@ userdebug_or_eng(`
 
   r_dir_file(ramdump, sysfs_type)
 
-  # To access statsd.
-  hwbinder_use(ramdump)
-  get_prop(ramdump, hwservicemanager_prop)
-  get_prop(ramdump, boot_status_prop)
-  allow ramdump fwk_stats_hwservice:hwservice_manager find;
-  binder_call(ramdump, stats_service_server)
-  allow ramdump fwk_stats_service:service_manager find;
-  binder_use(ramdump)
-
   # To implement fusefs (ramdumpfs) under /mnt/vendor/ramdump.
   allow ramdump fuse:filesystem relabelfrom;
   allow ramdump fuse_device:chr_file rw_file_perms;
@@ -41,7 +32,8 @@ userdebug_or_eng(`
   allow ramdump ramdump_vendor_mnt_file:dir { getattr mounton };
   allow ramdump ramdump_vendor_mnt_file:filesystem { mount unmount relabelfrom relabelto };
 
-  # Access new Stats AIDL APIs (ag/13714907).
+  # Access new Stats AIDL APIs
   allow ramdump fwk_stats_service:service_manager find;
   binder_call(ramdump, servicemanager)
+  binder_use(ramdump)
 ')
