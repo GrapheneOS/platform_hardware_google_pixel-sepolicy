@@ -12,6 +12,8 @@ binder_call(citadeld, hal_power_stats_default)
 allow citadeld hal_power_stats_vendor_service:service_manager find;
 
 # Let citadeld find and use statsd.
+hwbinder_use(citadeld)
+get_prop(citadeld, hwservicemanager_prop)
 binder_call(citadeld, stats_service_server)
 allow citadeld fwk_stats_service:service_manager find;
 binder_use(citadeld)
