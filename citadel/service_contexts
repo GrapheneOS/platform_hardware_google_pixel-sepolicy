@@ -1,0 +1,1 @@
+android.hardware.security.keymint.IKeyMintDevice/strongbox  u:object_r:hal_keymint_service:s0
