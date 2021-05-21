@@ -5,6 +5,7 @@ allow hal_vibrator_default persist_file:dir search;
 
 allow hal_vibrator_default vibrator_snd_device:chr_file rw_file_perms;
 allow hal_vibrator_default vibrator_snd_device:dir search;
+allow hal_vibrator_default audio_device:dir search;
 allow hal_vibrator_default proc_asound:dir search;
 allow hal_vibrator_default proc_asound:file r_file_perms;
 
