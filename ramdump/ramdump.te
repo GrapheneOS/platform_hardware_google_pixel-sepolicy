@@ -39,7 +39,8 @@ userdebug_or_eng(`
   allow ramdump fuse_device:chr_file rw_file_perms;
   allow ramdump mnt_vendor_file:dir r_dir_perms;
   allow ramdump ramdump_vendor_mnt_file:dir { getattr mounton };
-  allow ramdump ramdump_vendor_mnt_file:filesystem { mount unmount relabelfrom relabelto };
+  allow ramdump ramdump_vendor_fs:filesystem { mount unmount relabelfrom relabelto };
+  allow ramdump_vendor_mnt_file ramdump_vendor_fs:filesystem associate;
 
   # Access new Stats AIDL APIs (ag/13714907).
   allow ramdump fwk_stats_service:service_manager find;
