@@ -17,6 +17,9 @@ allow hal_power_default self:capability sys_nice;
 # Set scheduling info for surfaceflinger (for adpf)
 allow hal_power_default surfaceflinger:process setsched;
 
+# Set scheduling info for HWC (for adpf)
+allow hal_power_default hal_graphics_composer_default:process setsched;
+
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
 
