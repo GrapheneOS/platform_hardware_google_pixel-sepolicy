@@ -27,3 +27,8 @@ allow hal_power_default system_server:process setsched;
 allow hal_power_default proc_stat:file r_file_perms;
 allow hal_power_default proc_vendor_sched:dir r_dir_perms;
 allow hal_power_default proc_vendor_sched:file r_file_perms;
+
+userdebug_or_eng(`
+# Allow reading /data/vendor/* for debugging
+  allow hal_power_default vendor_data_file:file r_file_perms;
+')
