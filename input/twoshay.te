@@ -18,3 +18,6 @@ allow twoshay dumpstate:fifo_file write;
 
 # b/198755236
 dontaudit twoshay twoshay:capability dac_override;
+
+# b/226830650
+dontaudit twoshay boot_status_prop:file read;
