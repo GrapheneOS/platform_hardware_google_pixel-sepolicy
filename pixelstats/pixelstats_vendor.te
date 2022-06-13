@@ -18,6 +18,7 @@ allow pixelstats_vendor sysfs_pixel_stat:dir r_dir_perms;
 allow pixelstats_vendor sysfs_pixel_stat:file r_file_perms;
 
 userdebug_or_eng(`
+  allow pixelstats_vendor { proc_pressure_cpu proc_pressure_io proc_pressure_mem }:file r_file_perms;
   allow pixelstats_vendor proc_vmstat:file r_file_perms;
   allow pixelstats_vendor sysfs_ion:dir search;
   allow pixelstats_vendor sysfs_ion:file r_file_perms;
