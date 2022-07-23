@@ -1,2 +1,0 @@
-# b/237491814
-dontaudit hal_googlebattery dumpstate:fd { use };
