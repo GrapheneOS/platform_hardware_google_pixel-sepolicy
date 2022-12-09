@@ -13,6 +13,8 @@ allow hal_googlebattery sysfs_wlc:file rw_file_perms;
 
 set_prop(hal_googlebattery, vendor_battery_defender_prop)
 
-hwbinder_use(hal_googlebattery)
-add_hwservice(hal_googlebattery, hal_googlebattery_hwservice)
-get_prop(hal_googlebattery, hwservicemanager_prop)
+binder_call(hal_googlebattery, servicemanager)
+add_service(hal_googlebattery, hal_googlebattery_service)
+
+allow hal_googlebattery dumpstate:fd use;
+allow hal_googlebattery dumpstate:fifo_file write;
