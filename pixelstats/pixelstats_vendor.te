@@ -9,7 +9,7 @@ allow pixelstats_vendor sysfs_batteryinfo:file w_file_perms;
 allow pixelstats_vendor self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
 
 allow pixelstats_vendor sysfs_scsi_devices_0000:dir search;
-allow pixelstats_vendor sysfs_scsi_devices_0000:file r_file_perms;
+allow pixelstats_vendor sysfs_scsi_devices_0000:file rw_file_perms;
 allow pixelstats_vendor sysfs_fs_f2fs:dir search;
 allow pixelstats_vendor sysfs_fs_f2fs:file rw_file_perms;
 get_prop(pixelstats_vendor, boottime_public_prop)
