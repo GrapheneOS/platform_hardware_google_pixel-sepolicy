@@ -1,5 +1,11 @@
 type pixelstats_vendor, domain;
 
+# IStats
+binder_use(pixelstats_vendor)
+
+# Batery history
+allow pixelstats_vendor battery_history_device:chr_file r_file_perms;
+
 type pixelstats_vendor_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(pixelstats_vendor)
 
