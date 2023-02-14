@@ -1,2 +1,1 @@
 set_prop(vendor_init, vendor_vibrator_prop)
-get_prop(vendor_init, adaptive_haptics_prop)
