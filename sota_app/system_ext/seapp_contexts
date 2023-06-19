@@ -1,2 +1,0 @@
-# Factory OTA
-user=_app seinfo=platform name=com.google.android.factoryota domain=factory_ota_app levelFrom=all
