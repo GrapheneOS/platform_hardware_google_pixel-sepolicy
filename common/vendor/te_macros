@@ -12,6 +12,7 @@ domain_auto_trans(hal_dumpstate_default, $1_exec, $1)
 allow $1 dumpstate:fd use;
 allow $1 dumpstate:fifo_file { write getattr };
 allow $1 hal_dumpstate_default:fd use;
+allow hal_dumpstate_default $1:process { sigkill signal };
 allow $1 shell_data_file:file { write getattr };
 ')
 
