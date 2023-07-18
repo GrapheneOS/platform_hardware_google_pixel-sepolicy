@@ -18,3 +18,6 @@ allow citadeld fwk_stats_hwservice:hwservice_manager find;
 binder_call(citadeld, stats_service_server)
 allow citadeld fwk_stats_service:service_manager find;
 binder_use(citadeld)
+
+# Let citadeld set property
+set_prop(citadeld, vendor_nos_citadel_version);
