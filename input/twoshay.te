@@ -7,6 +7,7 @@ allow twoshay touch_offload_device:chr_file rw_file_perms;
 allow twoshay twoshay:capability sys_nice;
 
 binder_use(twoshay)
+add_service(twoshay, screen_protector_detector_service)
 add_service(twoshay, touch_context_service)
 add_service(twoshay, gril_antenna_tuning_service)
 binder_call(twoshay, platform_app)
